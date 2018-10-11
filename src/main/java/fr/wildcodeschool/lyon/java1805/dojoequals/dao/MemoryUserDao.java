@@ -16,7 +16,7 @@ public @ApplicationScoped class MemoryUserDao implements UserDao {
 	private @PostConstruct void initUsers() {
 		// TODO read JSON file using JSON-B
 		// getClass().getResourceAsStream("/users.json");
-		// See http://json-b.net/getting-started.html
+		// See http://json-b.net/getting-started.html (Mapping a collection)
 		users = new HashSet<>();
 	}
 
