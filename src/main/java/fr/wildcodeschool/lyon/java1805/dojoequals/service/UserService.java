@@ -14,12 +14,22 @@ public @ApplicationScoped class UserService {
 	}
 
 	public User byEmail(String email) {
-		// TODO
+		// TODO done
+		for (User user : userDao.getAll()) {
+			if (user.getEmail().equals(email)) {
+				return user;
+			}
+		}
 		return null;
 	}
 
 	public User byName(String name) {
-		// TODO
+		// TODO done
+		for (User user : userDao.getAll()) {
+			if (user.getName().equals(name)) {
+				return user;
+			}
+		}
 		return null;
 	}
 

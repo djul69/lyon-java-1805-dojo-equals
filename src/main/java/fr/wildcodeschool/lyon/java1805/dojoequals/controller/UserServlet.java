@@ -43,6 +43,11 @@ public @WebServlet("") class UserServlet extends HttpServlet {
 
 		// TODO use name, email, …
 		final User user = new User();
+		user.setName(name);
+		user.setEmail(email);
+		user.setGender(gender);
+		user.setEyeColor(eyeColor);
+		user.setAge(age);
 
 		userService.add(user);
 

@@ -30,7 +30,7 @@
 			<p>No user to display.</p>
 		</c:otherwise>
 	</c:choose>
-	<form method=post>
+	<form method=post action=.>
 		<fieldset>
 			<legend>New user</legend>
 			<p>
