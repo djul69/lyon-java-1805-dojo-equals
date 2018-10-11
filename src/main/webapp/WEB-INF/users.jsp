@@ -7,17 +7,17 @@
 <title>Users</title>
 </head>
 <body>
-	<p>There are ${userCount} user${userCount > 1 ? "s" : ""}.</p>
+	<p>User count: ${userCount}</p>
 	<form>
-		<input name=email placeholder=Email> <input type=submit
-			value="Find user">
+		<input name=email type=email placeholder=Email> <input
+			type=submit value="Find user by email">
 	</form>
 	<form>
 		<input name=name placeholder=Name> <input type=submit
-			value="Find user">
+			value="Find user by name">
 	</form>
 	<c:choose>
-		<c:when test="${user}">
+		<c:when test="${!empty user}">
 			<ul>
 				<li>Name: ${user.name}</li>
 				<li>Email: ${user.email}</li>
@@ -27,8 +27,27 @@
 			</ul>
 		</c:when>
 		<c:otherwise>
-			<p>No user found.</p>
+			<p>No user to display.</p>
 		</c:otherwise>
 	</c:choose>
+	<form method=post>
+		<fieldset>
+			<legend>New user</legend>
+			<p>
+				<label>Name: <input name=name value="Vanessa Bright"></label><br>
+				<label>Email: <input name=email type=email
+					value="vanessa.bright@example.com">
+				</label><br> <label>Gender: <select name=gender><option
+							selected>female</option>
+						<option>male</option></select></label><br> <label>Age: <input name=age
+					type=number value=30></label><br> <label>Eye color: <input
+					name=eyeColor value=blue>
+				</label><br>
+			</p>
+			<p>
+				<input type=submit value=Create>
+			</p>
+		</fieldset>
+	</form>
 </body>
 </html>

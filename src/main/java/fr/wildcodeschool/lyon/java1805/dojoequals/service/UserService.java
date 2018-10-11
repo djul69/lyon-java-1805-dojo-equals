@@ -1,7 +1,5 @@
 package fr.wildcodeschool.lyon.java1805.dojoequals.service;
 
-import java.util.NoSuchElementException;
-
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 
@@ -17,12 +15,12 @@ public @ApplicationScoped class UserService {
 
 	public User byEmail(String email) {
 		// TODO
-		throw new NoSuchElementException();
+		return null;
 	}
 
 	public User byName(String name) {
 		// TODO
-		throw new NoSuchElementException();
+		return null;
 	}
 
 	public void add(User user) {
